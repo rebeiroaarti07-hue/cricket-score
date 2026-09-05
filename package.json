@@ -1,0 +1,24 @@
+{
+  "name": "cricket-score",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A legally sourced live cricket score tracker.",
+  "type": "module",
+  "scripts": {
+    "build": "tsc --noEmit",
+    "dev": "tsx src/api/index.ts",
+    "migrate": "tsx scripts/migrate.ts",
+    "start": "tsx src/api/index.ts",
+    "test": "tsx --test",
+    "test:watch": "tsx --test --watch"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/pg": "^8.23.1",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  },
+  "dependencies": {
+    "pg": "^8.23.0"
+  }
+}

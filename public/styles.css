@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+:root { --ink: #172321; --muted: #75817c; --line: #dce3de; --paper: #f4f6f1; --white: #fff; --green: #196b51; --mint: #d9eee2; --orange: #e47d35; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Manrope", sans-serif; }
+.topbar { align-items: center; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; padding: 22px clamp(24px, 6vw, 88px); }
+.brand { align-items: center; color: var(--ink); display: flex; font-size: 15px; font-weight: 800; gap: 10px; letter-spacing: -.02em; text-decoration: none; }
+.brand-mark { align-items: center; background: var(--ink); color: #d9eee2; display: inline-flex; font-family: "DM Mono", monospace; font-size: 11px; height: 28px; justify-content: center; width: 34px; }
+.topbar-status, .footer { color: var(--muted); font-family: "DM Mono", monospace; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
+.status-dot { background: var(--orange); border-radius: 50%; display: inline-block; height: 7px; margin-right: 7px; width: 7px; }
+.shell { margin: 0 auto; max-width: 1120px; padding: 76px 24px 100px; }
+.intro { max-width: 600px; }
+.eyebrow { color: var(--green); font-family: "DM Mono", monospace; font-size: 10px; letter-spacing: .12em; margin: 0 0 20px; }
+h1 { font-size: clamp(46px, 7vw, 78px); letter-spacing: -.07em; line-height: .98; margin: 0; }
+h1 em { color: var(--green); font-family: Georgia, serif; font-weight: 400; letter-spacing: -.08em; }
+.intro-copy { color: var(--muted); font-size: 15px; line-height: 1.7; margin: 28px 0 0; max-width: 470px; }
+.toolbar { align-items: center; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; margin-top: 76px; padding-bottom: 14px; }
+.filter-tabs { display: flex; gap: 22px; }
+.filter-tab, .refresh-button { background: transparent; border: 0; color: var(--muted); cursor: pointer; font: 600 12px "Manrope", sans-serif; padding: 8px 0; }
+.filter-tab.active { color: var(--ink); }
+.count { background: var(--green); border-radius: 10px; color: white; font: 10px "DM Mono", monospace; margin-left: 5px; padding: 2px 6px; }
+.refresh-button { border: 1px solid var(--line); padding: 8px 12px; }
+.refresh-button span { color: var(--green); font-size: 16px; vertical-align: -1px; }
+.refresh-button.is-loading span { display: inline-block; animation: spin .8s linear infinite; }
+.matches { padding-top: 24px; }
+.match-card { background: var(--white); border: 1px solid var(--line); margin-bottom: 14px; padding: 22px 24px; }
+.match-card-head, .match-card-foot, .match-main { align-items: center; display: flex; justify-content: space-between; }
+.match-card-head { border-bottom: 1px solid #edf0ed; padding-bottom: 16px; }
+.live-badge { color: var(--orange); font: 10px "DM Mono", monospace; text-transform: uppercase; }
+.freshness-delayed { color: #a96a17; }
+.freshness-stale { color: #9a4b43; }
+.freshness-completed { color: var(--green); }
+.competition, .match-id, .match-card-foot { color: var(--muted); font-size: 11px; }
+.competition { margin-left: 16px; }
+.match-id { font-family: "DM Mono", monospace; }
+.match-main { padding: 25px 0; }
+.teams { display: grid; gap: 12px; }
+.team { align-items: center; display: flex; font-size: 16px; gap: 14px; }
+.team-active { font-weight: 800; }
+.team-code { align-items: center; background: var(--mint); color: var(--green); display: inline-flex; font: 11px "DM Mono", monospace; height: 32px; justify-content: center; width: 42px; }
+.score { text-align: right; }
+.score strong { display: block; font-size: 32px; letter-spacing: -.05em; }
+.score span { color: var(--muted); font: 11px "DM Mono", monospace; }
+.loading-state, .empty-state { color: var(--muted); padding: 50px 0; text-align: center; }
+.empty-state { display: grid; gap: 8px; }
+.empty-state strong { color: var(--ink); }
+.error strong { color: var(--orange); }
+.footer { border-top: 1px solid var(--line); display: flex; justify-content: space-between; padding: 22px clamp(24px, 6vw, 88px); }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (max-width: 600px) { .shell { padding-top: 52px; } .toolbar { align-items: flex-start; flex-direction: column; gap: 12px; } .match-card { padding: 18px; } .competition { display: block; margin: 8px 0 0; } .match-card-head { align-items: flex-start; } .match-main { align-items: flex-start; } .team { font-size: 14px; } .score strong { font-size: 25px; } .footer { display: grid; gap: 8px; } }

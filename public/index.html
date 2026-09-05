@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A clear, source-aware view of live cricket scores." />
+    <title>Cricket Score | Match centre</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Cricket Score home">
+        <span class="brand-mark" aria-hidden="true">CS</span>
+        <span>Cricket Score</span>
+      </a>
+      <div class="topbar-status"><span class="status-dot"></span>Score centre</div>
+    </header>
+
+    <main class="shell">
+      <section class="intro">
+        <p class="eyebrow">MATCH CENTRE / 05 SEP 2026</p>
+        <h1>Follow the game<br /><em>as it moves.</em></h1>
+        <p class="intro-copy">Live cricket, cleanly presented. Every score carries its source and last update so you always know what you are looking at.</p>
+      </section>
+
+      <section class="toolbar" aria-label="Match filters">
+        <div class="filter-tabs" role="tablist" aria-label="Match status">
+          <button class="filter-tab active" data-status="live" role="tab" aria-selected="true">Live <span class="count">1</span></button>
+          <button class="filter-tab" data-status="upcoming" role="tab" aria-selected="false">Upcoming</button>
+          <button class="filter-tab" data-status="completed" role="tab" aria-selected="false">Completed</button>
+        </div>
+        <button class="refresh-button" id="refresh" type="button" title="Refresh scores"><span aria-hidden="true">↻</span> Refresh</button>
+      </section>
+
+      <section id="matches" class="matches" aria-live="polite">
+        <div class="loading-state">Loading scores<span class="pulse">...</span></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Development feed</span>
+      <span>Updated from fixture data · Live provider pending approval</span>
+    </footer>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
